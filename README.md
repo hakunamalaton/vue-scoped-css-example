@@ -15,7 +15,7 @@ You can directly test on the [Vue Playgroud](https://play.vuejs.org/#eNp9kUFLwzA
 ## Child Component Root Elements
 From Vue documentation:
 
-> With scoped, the parent component's styles will not leak into child components. However, a child component's root node will be affected by both the parent's scoped CSS and the child's scoped CSS. This is by design so that the parent can style the child root element for layout purposes.
+> With scoped, the parent component's styles will not leak into child components. However, a child component's root node will be affected by both the parent's scoped CSS and the child's scoped CSS. This is by design so that the parent can style the child's root element for layout purposes.
 
 The example will help you understand the sentence `However, a child component's root node will be affected by both the parent's scoped CSS and the child's scoped CSS` easily.
 
@@ -42,7 +42,8 @@ of the component is the outest level block of a component. A component can have 
 the related documentation, please reach it at [Attribute Inheritance on Multiple Root Nodes](https://vuejs.org/guide/components/attrs.html#attribute-inheritance-on-multiple-root-nodes).
 
 ### The result
-The `BaseChild.vue` component applies the `text-red` CSS definition. The reason is by design of the Vue team so that **the parent can style the child root element for layout purposes**.
+The `BaseChild.vue` component applies the `text-red` CSS definition. The reason is by the design of the Vue team so that **the parent can style the child root element for layout purposes**.
+<img width="930" alt="Screenshot 2024-05-02 at 00 57 02" src="https://github.com/hakunamalaton/vue-scoped-css-example/assets/84494783/9d601ff7-540d-4ff4-adaa-df3068d397fc">
 
 You can try add the outer level `div` inside the `BaseChild.vue` like this:
 
