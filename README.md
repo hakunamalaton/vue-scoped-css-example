@@ -68,3 +68,4 @@ We define another CSS definition `text-blue` inside the child component `BaseChi
 #### The result 2
 The `BaseChild.vue` component applies the `text-red` CSS definition. Therefore, the CSS definition from
 the parent component takes higher precedence.
+<img width="1171" alt="Screenshot 2024-05-03 at 01 01 27" src="https://github.com/hakunamalaton/vue-scoped-css-example/assets/106505755/fb67b64f-cd86-44e8-b51e-894d98e83654">
