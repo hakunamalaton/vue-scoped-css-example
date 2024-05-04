@@ -9,7 +9,7 @@ import BaseChild from './BaseChild.vue';
 </template>
 
 <style scoped>
-.base-child-1 .text-green {
+.base-child-wrapper-1 :deep(.text-green) {
   color: green;
 }
 </style>
