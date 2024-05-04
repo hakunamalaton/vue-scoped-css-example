@@ -20,7 +20,7 @@ If you define the CSS within the `BaseParent.vue` like this:
 }
 </style>
 ```
-The CSS definition will not effect to the child component. Since the generate CSS is:
+The CSS definition will not affect the child component. Since the generated CSS is:
 ```CSS
 <style>
 .base-child-wrapper-1 .base-child-wrapper-2 .text-green[data-v-abczyx] {
@@ -28,7 +28,7 @@ The CSS definition will not effect to the child component. Since the generate CS
 }
 </style>
 ```
-But the DOM of the child component looks like:
+But the DOM of the child component looks like this:
 ```HTML
 <div class="base-child-wrapper-1" data-v-abcxyz="">
   <div class="base-child-wrapper-2">
@@ -38,7 +38,7 @@ But the DOM of the child component looks like:
   </div>
 </div>
 ```
-The expect CSS definition should be like:
+The expected CSS definition should be like this:
 ```CSS
 <style>
 .base-child-wrapper-1[data-v-abczyx] .base-child-wrapper-2 .text-green {
@@ -46,7 +46,7 @@ The expect CSS definition should be like:
 }
 </style>
 ```
-From the Vue official documentation, the [:deep](https://vuejs.org/api/sfc-css-features.html#deep-selectors) pseudo class may help.
+From the Vue official documentation, the [:deep](https://vuejs.org/api/sfc-css-features.html#deep-selectors) pseudo-class may help.
 
 Try fixing the CSS scoped definition inside the parent component:
 ```CSS
@@ -56,7 +56,7 @@ Try fixing the CSS scoped definition inside the parent component:
 }
 </style>
 ```
-The CSS effect should work as expected. For the simply, you can just add `:deep` pseudo class to the target
+The CSS effect should work as expected. For the simple, you can just add `:deep` pseudo-class to the target
 nested class:
 
 ```CSS
@@ -66,3 +66,4 @@ nested class:
 }
 </style>
 ```
+<img width="1025" alt="Screenshot 2024-05-04 at 16 42 13" src="https://github.com/hakunamalaton/vue-scoped-css-example/assets/106505755/fab545a4-063b-4b06-b2ef-691fd494f087">
