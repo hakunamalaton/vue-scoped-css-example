@@ -37,10 +37,10 @@ The CSS definition inside the `BaseChild` component:
 
 The slotted element does not get updated with the `text-blue` CSS definition since they are considered to be owned by the parent component passing them in. You can look at the DOM:
 
-// insert image here
+<img width="538" alt="Screenshot 2024-05-08 at 22 27 02" src="https://github.com/hakunamalaton/vue-scoped-css-example/assets/84494783/c8c072bf-c62b-4067-b7f3-6e8b68b4b850">
 
-**Explanation**: The slotted element does not have the attribute `data-v-...` since it belongs to parent component.
-The solution is to add `slotted` pseudo class to CSS definition of the child component:
+**Explanation**: The slotted element does not have the attribute `data-v-...` since it belongs to the parent component.
+The solution is to add `slotted` pseudo-class to the CSS definition of the child component:
 
 ```css
 <style scoped>
@@ -49,11 +49,11 @@ The solution is to add `slotted` pseudo class to CSS definition of the child com
 }
 </style>
 ```
-It will make you slotted componets style. Let look at the DOM:
+It will make you slotted components style. Let's look at the DOM:
 
-// insert slotted image here
+<img width="547" alt="Screenshot 2024-05-08 at 22 31 00" src="https://github.com/hakunamalaton/vue-scoped-css-example/assets/84494783/37bb35ba-05e8-4c0d-bced-982975dde9fe">
 
-**Explanation**: The slotted element have the attribute `data-v-...-s` then it can apply the CSS scoped from the child component.
+**Explanation**: The slotted element has the attribute `data-v-...-s` then it can apply the CSS scoped from the child component.
 
 ## Priority between the slotted scoped style and parent scoped style
 
@@ -68,7 +68,9 @@ Suppose we also define the CSS definition `text-blue` inside the parent componen
 </style>
 ```
 
-Surprised! The CSS definition from the parent component gets updated. Since both CSS definition are the same specificity, my hypothesis is the CSS definition of child component is mounted before the CSS definition of the parent component.
+Surprised! The CSS definition from the parent component gets updated. Since both CSS definitions have the same specificity, my hypothesis is the CSS definition of the child component is mounted before the CSS definition of the parent component.
 
-// insert image here
+<img width="525" alt="Screenshot 2024-05-08 at 22 43 11" src="https://github.com/hakunamalaton/vue-scoped-css-example/assets/84494783/28be065b-7dab-4178-8598-e07ff95737ab">
 
+**Explanation**: The `data-v-7ba5bd90` attribute comes from the CSS scoped definition of parent. The `data-v-1cb5f508-s` comes from the slotted
+scoped CSS definition of the child component.
