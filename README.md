@@ -5,7 +5,7 @@ References on Vue official documentation: https://vuejs.org/api/sfc-css-features
 Please directly go to each section to read the examples:
 - [Child Component Root Elements](https://github.com/hakunamalaton/vue-scoped-css-example/tree/main/child_component_root_elements)
 - [Deep Selectors](https://github.com/hakunamalaton/vue-scoped-css-example/tree/main/deep_selectors)
-- Slotted Selectors
+- [Slotted Selectors](https://github.com/hakunamalaton/vue-scoped-css-example/tree/main/slotted_selectors)
 - Global Selectors
 - Mixing Local and Global Styles
 - [Bonus] Scoped Style Tips
